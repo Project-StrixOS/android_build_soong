@@ -270,7 +270,7 @@ com\.google\.wear
 com\.google\.wear\..*
 
 # Lineage adds
-lineageos\.platform
+strixos\.platform
 org\.lineageos\.platform\.internal
 
 # NT adds

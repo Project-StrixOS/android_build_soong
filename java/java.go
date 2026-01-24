@@ -622,7 +622,7 @@ var (
 	bootClasspathTag           = dependencyTag{name: "bootclasspath", runtimeLinked: true}
 	systemModulesTag           = dependencyTag{name: "system modules", runtimeLinked: true}
 	frameworkResTag            = dependencyTag{name: "framework-res"}
-	lineageResTag              = dependencyTag{name: "org.lineageos.platform-res"}
+	lineageResTag              = dependencyTag{name: "org.los.platform-res"}
 	kotlinPluginTag            = dependencyTag{name: "kotlin-plugin", toolchain: true}
 	composeEmbeddablePluginTag = dependencyTag{name: "compose-embeddable-plugin", toolchain: true}
 	composePluginTag           = dependencyTag{name: "compose-plugin", toolchain: true}
@@ -742,7 +742,7 @@ func sdkDeps(ctx android.BottomUpMutatorContext, sdkContext android.SdkContext, 
 		ctx.AddVariationDependencies(nil, systemModulesTag, sdkDep.systemModules)
 	}
 
-	if ctx.ModuleName() == "org.lineageos.platform-res" {
+	if ctx.ModuleName() == "org.los.platform-res" {
 		ctx.AddVariationDependencies(nil, frameworkResTag, "framework-res")
 	}
 }
