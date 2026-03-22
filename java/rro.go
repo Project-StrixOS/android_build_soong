@@ -22,6 +22,7 @@ import (
 
 	"github.com/google/blueprint"
 	"github.com/google/blueprint/proptools"
+    "strings"
 )
 
 func init() {
@@ -200,7 +201,7 @@ func (r *RuntimeResourceOverlay) GenerateAndroidBuildActions(ctx android.ModuleC
 
 	r.outputFile = signed
 	partition := rroPartition(ctx)
-	r.installDir = android.PathForModuleInPartitionInstall(ctx, partition, "overlay", String(r.properties.Theme))
+	r.installDir = android.PathForModuleInPartitionInstall(ctx, partition, "overlay", strings.ReplaceAll(String(r.properties.Theme),"Lineage","Strix"))
 	ctx.InstallFile(r.installDir, r.outputFile.Base(), r.outputFile)
 
 	android.SetProvider(ctx, FlagsPackagesProvider, FlagsPackages{
