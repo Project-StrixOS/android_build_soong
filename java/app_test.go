@@ -82,7 +82,7 @@ func TestApp(t *testing.T) {
 			expectedLinkImplicits = append(expectedLinkImplicits, manifestFixer.Output.String())
 
 			frameworkRes := result.ModuleForTests(t, "framework-res", "android_common")
-			lineageRes := result.ModuleForTests(t, "org.lineageos.platform-res", "android_common")
+			lineageRes := result.ModuleForTests(t, "org.los.platform-res", "android_common")
 			expectedLinkImplicits = append(expectedLinkImplicits,
 				frameworkRes.Output("package-res.apk").Output.String())
 			expectedLinkImplicits = append(expectedLinkImplicits,

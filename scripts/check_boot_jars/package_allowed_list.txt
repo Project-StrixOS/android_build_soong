@@ -214,7 +214,7 @@ vendor\.google_clockwork\.displayoffload3
 vendor\.google_clockwork\.displayoffload3\..*
 
 # Lineage adds
-lineageos\.platform
+strixos\.platform
 org\.lineageos\.platform\.internal
 
 # MTK adds
